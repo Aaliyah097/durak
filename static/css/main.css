@@ -1,0 +1,109 @@
+.card{
+    height: 175px;
+    width: 125px;
+    margin: 1%;
+    border: none !important;
+}
+
+@media screen and (max-width: 750px){
+    .col-md-2{
+        width: 25% !important;
+    }
+    .card-inner{
+        height: 150px;
+        width: 85px;
+    }
+    .card{
+        height: 150px;
+        width: 75px;
+    }
+    .card button{
+        font-size: 8px;
+        height: 15px;
+    }
+    .row{
+        margin-top: 5% !important;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .card-inner{
+        height: 175px;
+        width: 150px;
+    }
+    .card {
+        height: 175px;
+        margin: 3%;
+    }
+}
+
+.card-inner {
+    padding: 5px;
+
+    border-radius: 5px;
+
+    box-shadow:  1px 1px 0px #5a5a5a,
+    -5px -0px 0px #ffffff;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-variant: small-caps;
+    text-align: center;
+
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.card-front {
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.card-back {
+    background-color: transparent;
+    transform: rotateY(180deg);
+    text-align: left;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card button{
+    width: 100%;
+    margin-top: 2%;
+    z-index: 999 !important;
+    border: 1px solid black;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.bottom-menu span {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
